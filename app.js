@@ -2,11 +2,19 @@
  * Module dependencies.
  */
 
-var config = require('config')
+var fs = require('fs')
   , express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
   , sio = require('socket.io');
+
+var config;
+try {
+  config = require('config.json');
+} catch(err) {
+  console.warn('WARN: config.json does not exists, trying to load default configuration');
+  config = require('config.default.json');
+}
 
 /**
  * App.
