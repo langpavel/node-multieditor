@@ -2,10 +2,11 @@
  * Module dependencies.
  */
 
-var express = require('express')
+var config = require('config')
+  , express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
-  , sio = require('../../lib/socket.io');
+  , sio = require('socket.io');
 
 /**
  * App.
@@ -42,7 +43,7 @@ app.get('/', function (req, res) {
  * App listen.
  */
 
-app.listen(3000, function () {
+app.listen(config.listen, function () {
   var addr = app.address();
   console.log('   app listening on http://' + addr.address + ':' + addr.port);
 });
