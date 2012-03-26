@@ -1,0 +1,23 @@
+{
+  "author": "Pavel Lang <langpavel@phpskelet.org>",
+  "name": "multieditor",
+  "description": "Web based editor allowing many users editing one text simultaneously",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/langpavel/node-multieditor.git"
+  },
+  "dependencies": {
+    "socket.io":"latest",
+    "express":"latest",
+    "ejs":"latest",
+    "stylus":"latest",
+    "nib":"latest",
+    "jade":"latest"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
